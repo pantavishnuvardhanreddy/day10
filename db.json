@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "Title": "a",
+      "Route": "poonam",
+      "Doctype": "venkateshh",
+      "Module": "working..",
+      "id": 2
+    },
+    {
+      "Title": "",
+      "Route": "",
+      "Doctype": "",
+      "Module": "",
+      "id": 3
+    },
+    {
+      "Title": "WERE",
+      "Route": "WRF",
+      "Doctype": "WRG",
+      "Module": "ERG",
+      "id": 4
+    },
+    {
+      "Title": "c",
+      "Route": "v",
+      "Doctype": "c",
+      "Module": "v",
+      "id": 5
+    },
+    {
+      "Title": "",
+      "Route": "",
+      "Doctype": "",
+      "Module": "",
+      "id": 6
+    },
+    {
+      "Title": "vishnu",
+      "Route": "192.162.76.0",
+      "Doctype": "pdf",
+      "Module": "example.html",
+      "id": 7
+    },
+    {
+      "Title": "wws",
+      "Route": "wwe",
+      "SelectDocType": "doc",
+      "Module": "hjhjh",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; width: 900px;  border: 2px solid black; padding: 15px; ">
+        <div style="width: 500px; align-items: flex-start; margin: 50px;">
+            Title<br>      
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="customer support"
+          read
+          required
+        >
+        </input><br>
+        Route<br>
+        <input
+          type="text"
+          name="route"
+          id="route"
+          placeholder="support"
+          required
+          >
+        </input><br>
+        Select doc type<br>
+        <input
+          type="text"
+          name="selectdoctype"
+          id="selectdoctype"
+          placeholder="issue"
+          required
+          >
+        </input><br>
+        module<br>
+        <input
+
+          type="text"
+          name="module"
+          id="module"
+          placeholder=" "
+          required
+          >
+        </input><br>
+        </div>
+        <div style="width: 100%; position: relative;">
+        <button type="Save" style="position:absolute; right:5px; top:0px" onclick="save()">Save</button>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Is Standard" name="Is Standard" value="Is Standard" style="width:10px; height:15px; border:none"/>
+        <label for="Is Standard"> Is Standard</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Published" name="Published" value="Published" style="width:10px; height:15px; border:none"/>
+        <label for="Published">Published </label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Login Required" name="Login Required" value="Login Required" style="width:10px; height:15px; border:none"/>
+        <label for="Login Required">Login Required</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Route to Sucess Link" name="Route to Sucess Link" value="Route to Sucess Link" style="width:10px; height:15px; border:none"/>
+        <label for="Route to Sucess Link">Route to Sucess Link</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Edit" name="Allow Edit" value="Allow Edit" style="width:10px; height:15px; border:none"/>
+        <label for="Allow Edit">Allow Edit</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Multiple" name="Allow Multiple" value="Allow Multiple" style="width:10px; height:15px; border:none"/>
+        <label for="Allow Multiple">Allow Multiple</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Show as Grid" name="Show as Grid" value="Show as Grid" style="width:10px; height:15px; border:none" />
+        <label for="Show as Grid">Show as Grid</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Delete" name="Allow Delete" value="Allow Delete" style="width:10px; height:15px; border:none"/>
+        <label for="Allow Delete">Allow Delete</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Print" name="Allow Print" value="Allow Print"  style="width:10px; height:15px; border:none"/>
+        <label for="Allow Print">Allow Print</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Comments" name="Allow Comments" value="Allow Comments" style="width:10px; height:15px; border:none"/>
+        <label for="Allow Comments">Allow Comments</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Show Attachments" name="Show Attachments" value="Show Attachments" style="width:10px; height:15px; border:none"/>
+        <label for="Show Attachments">Show Attachments</label></span><br>
+        <span style="display:flex; height:10px"><input type="checkbox" id="Allow Incomplete Forms" name="Allow Incomplete Forms" value="Allow Incomplete Forms" style="width:10px; height:15px; border:none"/>
+        <label for="Allow Incomplete Forms">Allow Incomplete Forms</label></span><br>
+        </div>
+ 
+    </div>
+</body>
+<script>
+    function save() {
+        const payload = {
+            Title: document.getElementById('title').value,
+            Route: document.getElementById('route').value,
+            SelectDocType: document.getElementById('selectdoctype').value,
+            Module: document.getElementById('module').value
+        }
+        fetch("http://localhost:3000/posts", {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+    }
+</script>
+</html>
